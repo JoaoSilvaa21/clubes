@@ -1,0 +1,337 @@
+<!<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estagiários da Bola</title>
+<link rel="icon" href="/static/imagens/Logo site icone2.png" type="image/png">
+<title>São Paulo Futebol Clube</title>
+<link rel="stylesheet" href="style.css">
+<div class="logo-container">
+    <img src="../imagens/Logosite.png" alt="Logo" class="logo">
+    <h1>Estagiários da Bola</h1>
+</div>
+<!-- Botão no canto direito para voltar à página principal -->
+<a href="/home" class="home-button">Início</a>
+
+<style>
+    /* Botão transparente no canto direito */
+.home-button {
+    position: absolute;
+    top: 20px;             /* Alinhamento vertical */
+    right: 20px;           /* Alinhamento horizontal */
+    background-color: transparent; /* Fundo transparente */
+    border: 2px solid white;       /* Borda branca */
+    color: white;                  /* Cor do texto */
+    padding: 8px 16px;             /* Espaço interno do botão */
+    text-decoration: none;         /* Remove sublinhado */
+    font-size: 1em;
+    border-radius: 5px;            /* Bordas arredondadas */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.home-button:hover {
+    background-color: white; /* Fundo branco ao passar o mouse */
+    color: black;            /* Texto preto ao passar o mouse */
+}
+
+/* Contêiner da logo e título */
+.logo-container {
+    display: flex;
+    align-items: center;    /* Alinha verticalmente */
+    color: white;           /* Cor do texto */
+    margin-left: 20px;      /* Espaçamento a partir do lado esquerdo */
+}
+
+/* Logo */
+.logo {
+    width: 150px;            /* Define o tamanho da logo */
+    margin-right: 10px;     /* Espaçamento entre a logo e o título */
+}
+
+/* Título */
+.logo-container h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+h1 {
+font-size: 2em;          /* Tamanho do texto */
+margin: 0;               /* Remove qualquer margem */
+font-family: Arial, sans-serif;
+} body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../imagens/fundospfc.jpg'); /* Caminho para sua imagem de fundo */
+    background-attachment: fixed; /* Mantém a imagem fixa enquanto a página é rolada */
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    background-position: center; /* Centraliza a imagem de fundo */
+    position: relative; /* Necessário para aplicar um overlay */
+}
+
+/* Criando o overlay escuro */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Camada escura com 50% de opacidade */
+    z-index: -1; /* Garante que o overlay fique atrás do conteúdo */
+}
+
+header {
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.hero {
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+/* Ajustando o conteúdo para garantir legibilidade */
+main {
+    background-color: rgba(255, 255, 255, 0.8); /* Sobreposição branca com opacidade */
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+
+        header {
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        .hero {
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .hero img {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 2em;
+        }
+
+        #noticias {
+            padding: 20px;
+            color:#f4f4f4
+        }
+
+        #noticias h2 {
+            text-align: center;
+            color: #e60012;
+        }
+
+        .news-carousel {
+            display: flex;
+            overflow: hidden;
+            justify-content: center;
+        }
+
+        .news-item {
+            display: none;
+            width: 300px;
+            margin: 0 15px;
+            text-align: center;
+        }
+
+        .news-item.active {
+            display: block;
+        }
+
+        .news-item img {
+            width: 100%;
+        }
+
+        #titulos, #jogos, #elenco, #historico, #curiosidades {
+            padding: 20px;
+            text-align: center;
+            color:#f4f4f4
+        }
+
+        #titulos h2, #jogos h2, #elenco h2, #historico h2, #curiosidades h2 {
+            color: #e60012;
+        }
+
+        .titles-list, .games-list, .team-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .title, .game, .player {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #e60012;
+            border-radius: 5px;
+            background-color: 
+            #030303;
+            width: 250px;
+            text-align: center;
+        }
+
+        .title h3, .game p, .player p {
+            margin: 0;
+        }
+
+        footer {
+            background-color: #e60012;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .play-button {
+            font-size: 18px;
+            background-color: #e60012;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .play-button:hover {
+            background-color: #b30009;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Botão para tocar o hino -->
+    <button id="play-button" class="play-button">🔊 Tocar Hino</button>
+
+    <header>
+        <h1>São Paulo Futebol Clube</h1>
+    </header>
+
+    <section class="hero">
+        <img src="../imagens/logo_spfc.png" alt="Logo São Paulo" class="logo" />
+        <h1>Bem-vindo ao São Paulo Futebol Clube</h1>
+        <audio autoplay loop>
+            <source src="imagens/spfc/hino.mp3" type="audio/mpeg">
+            Seu navegador não suporta o áudio.
+        </audio>
+    </section>
+
+    <section id="noticias">
+        <h2>Últimas Notícias</h2>
+        <div class="news-carousel">
+            <div class="news-item active">
+                <h3>São Paulo vence o Palmeiras e avança para a final da Copa do Brasil</h3>
+                <p>Em um clássico emocionante, o São Paulo venceu o Palmeiras e garantiu vaga na final da Copa do Brasil.</p>
+                <img src="imagens/spfc/noticia1.jpg" alt="Vitória sobre Palmeiras" class="news-image">
+            </div>
+            <div class="news-item">
+                <h3>Reforço para 2024: São Paulo anuncia atacante internacional</h3>
+                <p>O São Paulo confirmou a contratação de um atacante de destaque no futebol europeu para reforçar o elenco em 2024.</p>
+                <img src="imagens/spfc/noticia2.jpg" alt="Reforço para 2024" class="news-image">
+            </div>
+            <div class="news-item">
+                <h3>São Paulo derrota o Santos e avança nas quartas de final do Paulista</h3>
+                <p>O São Paulo garantiu a classificação para as quartas de final do Campeonato Paulista após vencer o Santos em casa.</p>
+                <img src="imagens/spfc/noticia3.jpg" alt="Vitória no Paulista" class="news-image">
+            </div>
+        </div>
+    </section>
+
+    <section id="titulos">
+        <h2>Títulos do Clube</h2>
+        <div class="titles-list">
+            <div class="title">
+                <h3>Copa Libertadores</h3>
+                <p>3 títulos</p>
+            </div>
+            <div class="title">
+                <h3>Campeonato Brasileiro</h3>
+                <p>6 títulos</p>
+            </div>
+            <div class="title">
+                <h3>Copa do Mundo de Clubes</h3>
+                <p>1 título</p>
+            </div>
+            <div class="title">
+                <h3>Copa Sudamericana</h3>
+                <p>1 título</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="jogos">
+        <h2>Próximos Jogos</h2>
+        <div class="games-list">
+            <div class="game">
+                <p><strong>Data:</strong> 15/11 - São Paulo vs Flamengo</p>
+            </div>
+            <div class="game">
+                <p><strong>Data:</strong> 20/11 - São Paulo vs Atlético Mineiro</p>
+            </div>
+            <div class="game">
+                <p><strong>Data:</strong> 25/11 - São Paulo vs Palmeiras</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="elenco">
+        <h2>Elenco Atual</h2>
+        <div class="team-list">
+            <div class="player">
+                <p><strong>Calleri</strong> - Posição: Atacante</p>
+            </div>
+            <div class="player">
+                <p><strong>Igor Gomes</strong> - Posição: Meio-campo</p>
+            </div>
+            <div class="player">
+                <p><strong>Rafael</strong> - Posição: Goleiro</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="historico">
+        <h2>História do Clube</h2>
+        <p>O São Paulo Futebol Clube, fundado em 1930, é um dos maiores clubes do Brasil e do mundo, com uma história repleta de títulos nacionais e internacionais, incluindo a Copa Libertadores, o Campeonato Brasileiro e a Copa do Mundo de Clubes da FIFA.</p>
+    </section>
+
+    <section id="curiosidades">
+        <h2>Curiosidades</h2>
+        <p>O São Paulo é um dos clubes mais vitoriosos do futebol brasileiro, com destaque para sua rivalidade histórica com Palmeiras, Corinthians e Santos. O clube também é conhecido pelo seu estádio, o Morumbi, um dos maiores e mais modernos do Brasil.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 São Paulo Futebol Clube. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Carrossel de notícias
+        let currentIndex = 0;
+        const newsItems = document.querySelectorAll('.news-item');
+        const totalItems = newsItems.length;
+
+        function showNextItem() {
+            newsItems[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % totalItems; // Volta ao primeiro item
+            newsItems[currentIndex].classList.add('active');
+        }
+
+        setInterval(showNextItem, 3000); // Troca a imagem a cada 3 segundos
+    </script>
+</body>
+</html>
